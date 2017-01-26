@@ -1,0 +1,51 @@
+#!/bin/sh
+
+#
+# Configuration:
+#
+SKIM=/Applications/Skim.app
+
+USE_GROWL=false
+PDFKIT_SKIM=mavericks
+PDFKIT_DEF=sierra
+
+#
+# End of Configuration
+#
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+#
+# Turn PDFKit to Skim Compatible Version
+#
+if [ "$USE_GROWL" == "true" ]; then
+  osascript "$DIR"/ShowMessage.scpt "Choosing $PDFKIT_SKIM PDFKit"
+fi
+
+"$DIR"/pdfkit $PDFKIT_SKIM
+
+#
+# Run Skim
+#
+open "$SKIM" --args $@ 
+
+#
+# Wait a little...
+#
+sleep 5
+
+#
+# Turn PDFKit back to default
+#
+if [ "$USE_GROWL" == "true" ]; then
+  osascript "$DIR"/ShowMessage.scpt "Choosing $PDFKIT_DEF PDFKit"
+fi
+
+"$DIR"/pdfkit $PDFKIT_DEF
+
+#
+# Kill the SkimWrapper
+#
+# For some reason, it is left over
+#
+killall -9 SkimWrapper >/dev/null 2>&1
+

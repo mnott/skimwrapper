@@ -1,0 +1,4 @@
+CFBundleName = "SkimWrapper";
+CFBundleShortVersionString = "1.0";
+CFBundleGetInfoString = "SkimWrapper version 1.0 Copyright 2017  Matthias Nott";
+NSHumanReadableCopyright = "Copyright 2017  Matthias Nott.";

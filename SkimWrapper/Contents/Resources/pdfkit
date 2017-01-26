@@ -1,0 +1,43 @@
+#!/bin/bash
+
+scriptname=`basename $0`
+dir=/System/Library/Frameworks/Quartz.framework/Versions/A/Frameworks
+
+if [ $# -lt 1 ]; then
+  echo "Usage: $scriptname <os>"
+  echo ""
+  echo "For example: $scriptname sierra"
+  echo ""
+  echo The following PDFKit Frameworks are available:
+  echo ""
+  (
+    cd $dir
+    ls -lad PDF*
+  )
+  exit
+fi
+
+os=$1
+
+if [ ! -L $dir/PDFKit.framework ]; then
+  echo "$dir/PDFKit.framework is not a symbolic link. Moving it to become one..."
+  (
+    cd $dir
+    if [ ! -d PDFKit.framework ]; then
+      echo "Some error has occurred changing to $dir. Aborting."
+      exit 1
+    fi
+    sudo mv PDFKit.framework PDFKit.framework.$os
+    sudo ln -s PDFKit.framework.$os PDFKit.framework
+  )
+else
+  (
+    cd $dir
+    if [ ! -L PDFKit.framework -o ! -d PDFKit.framework.$os ]; then
+      echo "Some error has occurred changing to $dir. Aborting."
+      exit 1
+    fi
+    sudo rm PDFKit.framework
+    sudo ln -s PDFKit.framework.$os PDFKit.framework
+  )
+fi
