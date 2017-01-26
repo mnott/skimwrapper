@@ -5,8 +5,8 @@ Welcome to SkimWrapper!
 Summary
 ---------
 
-This is a small wrapper script (and documentation) that I came up with when trying to work around the completely fucked up PDFKit implementation that Apple is torturing its customers with - and that, most importantly, prevents 
-the awesome application [Skim](http://skim-app.sourceforge.net). You can read more details about the problem [here](http://www.mnott.de/how-to-workaround-the-fucked-up-pdfkit-in-sierra/), and a long discussion on it [on the Skim forum](https://sourceforge.net/p/skim-app/bugs/1109/).
+This is a small wrapper script (and documentation) that I came up with when trying to work around the completely fucked up PDFKit implementation that Apple is torturing its customers with - and that, most importantly, prevents
+the awesome application [Skim](http://skim-app.sourceforge.net) from working correctly. You can read more details about the problem [here](http://www.mnott.de/how-to-workaround-the-fucked-up-pdfkit-in-sierra/), and a long discussion on it [on the Skim forum](https://sourceforge.net/p/skim-app/bugs/1109/).
 
 Now, there is no real fix for this problem as for the time being. Apple has, in a pretty much post-factual way, increasingly claimed having repaired PDFKit, while with each MacOS beta, it actually got worse.
 
@@ -73,7 +73,7 @@ You should be asked for your password, and the second line will remove the need 
 3. Disable System Integrity Protection
 ---------
 
-In [the same article](http://www.mnott.de/how-to-workaround-the-fucked-up-pdfkit-in-sierra/), scroll down to the section "How do we deploy PDFKit.framework." First, I show you there how to disable System Integrity Protection. Just scroll down that article to find a section **How do we deploy PDFKit.framework**.
+In [the same article](http://www.mnott.de/how-to-workaround-the-fucked-up-pdfkit-in-sierra/), scroll down to the section **How do we deploy PDFKit.framework**. First, I show you there how to disable System Integrity Protection. Just follow the instructions in that article.
 
 ----------
 4. Deploy the working PDFKit
@@ -118,7 +118,7 @@ Once you have done all of this, rename the directory **SkimWrapper** to **SkimWr
 Usage
 =========
 
-If you just double-click on the **SkimWrapper** application in your **/Applications** folder, MacOS should be clever enough to remember from now on that you want to use it for PDF files, i.e., it should show up, right under **Skim**, if you right-click on a PDF file and choose **Open with**. 
+If you just double-click on the **SkimWrapper** application in your **/Applications** folder, MacOS should be clever enough to remember from now on that you want to use it for PDF files, i.e., it should show up, right under **Skim**, if you right-click on a PDF file and choose **Open with**.
 
 If it does not show up there, you can try doing this command in a terminal window:
 
