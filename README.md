@@ -88,7 +88,7 @@ The script that I then give in that article is part of this workaround, so you c
 5. Install and optionally configure SkimWrapper
 ----------
 
-Now let's assume you have dowloaded the git project to your **~/Downloads** folder, where you now have a directory skimwrapper, which, among other things, contains a file **README.md** (this file), as well as a directory SkimWrapper.
+Now let's assume you have dowloaded the git project to your **~/Downloads** folder, where you now have a directory **skimwrapper-master** (if you used the "Clone or Download" - "Download ZIP" option), or **skimwrapper** (if you used **git clone https://github.com/mnott/skimwrapper**), which, among other things, contains a file **README.md** (this file), as well as a directory SkimWrapper.
 
 If you have your copy of **Skim** installed as **/Applications/Skim.app**, you should not need to do anything special. But you may still want to look at the file **SkimWrapper/Contents/Resources/script** for some configuration that you may find interesting, right at the top of the file:
 
