@@ -26,7 +26,7 @@ fi
 #
 # Run Skim
 #
-open "$SKIM" --args $@ 
+open "$SKIM" --args "$@"
 
 #
 # Wait a little...
