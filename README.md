@@ -37,6 +37,12 @@ If you cannot live with that, read no further.
 If you are annoyed by that, call your local Congress woman and also make sure to [let Apple know](https://bugreport.apple.com) how much annoyed you are.
 
 
+Open Points
+===========
+
+For some reason, about half the time I use **Open With SkimWrapper**, it does not pass along the file name. I don't know how to fix that, but if it happens, it will still have started Skim with the right PDFKit, which means, you can just then **Open With Skim** to load the PDF(s) directly into the already running Skim. If you know how to fix it, feel free!
+
+
 Deployment
 =========
 
